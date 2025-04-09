@@ -1,5 +1,9 @@
 from sqlalchemy import create_engine, text
+import os
 
+db_connection_string = os.environ['DB_CONNECTION_STRING']
+
+engine = create_engine(db_connection_string)
 
 def show_jobs():
     with engine.connect() as conn:
