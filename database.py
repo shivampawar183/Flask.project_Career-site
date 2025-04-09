@@ -1,9 +1,6 @@
 from sqlalchemy import create_engine, text
 
 
-engine = create_engine("mysql+pymysql://root:root@localhost/test1?charset=utf8mb4")
-
-
 def show_jobs():
     with engine.connect() as conn:
         result = conn.execute(text("select * from jobs"))
