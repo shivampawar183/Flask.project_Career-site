@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine, text
-import os
 
-engine = os.getenv('DATABASE_URL')
+
 def show_jobs():
     with engine.connect() as conn:
         result = conn.execute(text("select * from jobs"))
