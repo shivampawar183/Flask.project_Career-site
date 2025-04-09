@@ -1,7 +1,9 @@
 from flask import Flask, render_template, jsonify, request
 from database import show_jobs, show_jobdetails, job_application
 
+
 app = Flask(__name__)
+
 
 @app.route("/")
 def home_page():
@@ -40,3 +42,8 @@ def apply_page(id):
 
 if __name__ == '__main__':
     app.run(host='localhost', debug=True)
+    
+    
+    
+
+
